@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+/*
+body {
+  background-color: navy;
+  color: white;
+}
+
+a {
+  color: white;
+}*/
+
+div.review {
+  background-color: #ffff55;
+  margin: 10px;
+  box-shadow: 10px 10px 5px #888888;
+  max-width: 500px;
+  transform: rotate(-2deg);
+}

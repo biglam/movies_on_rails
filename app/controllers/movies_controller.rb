@@ -73,7 +73,7 @@ class MoviesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def movie_params
-      params.require(:movie).permit(:name, :review, :actors, :director, :released, :format_id)
+      params.require(:movie).permit(:name, :review, :actors, :director, :released, :format_id, :movie_image)
     end
 
     def get_info_from_omdb(movie_title)

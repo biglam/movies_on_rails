@@ -1,9 +1,12 @@
+
 <h2><% if @movie.reviews.count != 0 %>Reviews <% end %></h2>
 <% @movie.reviews.each do |review| %>
+<div class="review">
 <p><strong>By User:</strong> <%= review.username %>
   <p><strong>Format:</strong> <%=review.format.name %></p>
   <p><strong>Review:</strong></p>
-  <em><%= review.review %>
-    <p><strong>Updated: </strong> <%=  review.updated_at %></p>
+  <em><%= review.review %></em>
+    <p><strong>Updated: </strong> <%=  review.updated_at %></p></p>
     <br>
+    </div>
 <% end %>   
