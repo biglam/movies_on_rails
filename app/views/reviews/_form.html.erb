@@ -13,7 +13,8 @@
 
   <div class="field">
     <%= f.label :movie_id %><br>
-    <%= f.collection_select :movie_id, Movie.order(:id),:id,:name, include_blank: false %>
+ 
+    <%= f.collection_select :movie_id, Movie.order(:id),:id,:name, :selected => params[:movie_id] %>
   </div>
   <div class="field">
     <%= f.label :format_id %><br>
@@ -21,7 +22,7 @@
   </div>
   <div class="field">
     <%= f.label :username %><br>
-    <%= f.text_field :username %>
+    <%= f.text_field :username, :value => current_user.email.to_s %>
   </div>
   <div class="field">
     <%= f.label :review %><br>

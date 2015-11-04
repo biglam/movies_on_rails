@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+  devise_for :users
+  root to: "movies#index"
   resources :reviews
   resources :formats
   resources :movies
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
