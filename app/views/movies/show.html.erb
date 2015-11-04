@@ -19,6 +19,6 @@
   <%= @movie.released %>
 </p>
 <%= render partial: 'movies/reviews' %>
-<%= link_to('Add Review', new_review_path(:movie_id => @movie.id)) %>
-<%= link_to 'Edit', edit_movie_path(@movie) %> |
+<%= link_to('Add Review', new_review_path(:movie_id => @movie.id)) if can? :create, Review %>
+<%= link_to 'Edit', edit_movie_path(@movie) if can? :edit, @movie %> |
 <%= link_to 'Back', movies_path %>

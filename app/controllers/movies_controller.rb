@@ -1,6 +1,7 @@
 class MoviesController < ApplicationController
   before_action :set_movie, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!, only: [:edit, :update, :destroy, :create]
+  load_and_authorize_resource
 
 
   # GET /movies

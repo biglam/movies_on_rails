@@ -2,6 +2,7 @@ class FormatsController < ApplicationController
   before_action :set_format, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!, only: [:edit, :update, :destroy, :create]
 
+  load_and_authorize_resource
 
   # GET /formats
   # GET /formats.json
